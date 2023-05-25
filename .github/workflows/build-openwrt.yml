@@ -68,7 +68,7 @@ jobs:
         ls -al
         ls -al /
         ls -al $GITHUB_WORKSPACE
-        patch -p1
+        patch -p1 < $GITHUB_WORKSPACE/$PATCH
     - name: Load custom feeds
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
