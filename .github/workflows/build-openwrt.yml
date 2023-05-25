@@ -65,7 +65,7 @@ jobs:
       working-directory: /workdir
       run: |
         cd openwrt
-        [ -e $PATCH] && patch -p1 < $PATCH
+        patch -p1 < $PATCH
     - name: Load custom feeds
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
